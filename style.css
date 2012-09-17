@@ -148,7 +148,7 @@ address {
 }
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-family: monospace;
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
@@ -158,7 +158,7 @@ pre {
 	max-width: 100%;
 }
 code, kbd, tt, var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: 15px monospace;
 }
 abbr, acronym {
 	border-bottom: 1px dotted #666;
@@ -385,7 +385,6 @@ a:active {color: #FF4B33; }
 
 /* =Menu
 ----------------------------------------------- */
-
 .main-navigation {
 	display: block;
 	position: fixed;
@@ -703,4 +702,66 @@ object {
 /* Search widget */
 #searchsubmit {
 	display: none;
+}
+
+
+
+/* <=800px width
+-----------------------------------------------*/
+@media screen and (max-width: 800px) {
+
+	body {
+		background: #fff;
+		padding: 0;
+	}
+
+	.site-title a {
+		font-size: 3.5em;
+	}
+
+	.main-navigation {
+		position: static;
+	}
+
+	#primary {
+		margin: auto;
+	}
+
+	#main {
+		width: 96%;
+		margin: 0;
+		padding: 2%;
+		box-shadow: none;
+	}
+
+	
+
+	div.wpcf7 input,
+	div.wpcf7 textarea {
+		width: 90%;
+	}
+}
+
+/* <=500px width
+-----------------------------------------------*/
+@media screen and (max-width: 500px) {
+
+	.site-title a {
+		font-size: 2.5em;
+	}
+
+	.main-navigation ul {
+		text-align: left;
+	}
+
+	.main-navigation li {
+		display: block;
+	}
+
+	article.grid {
+		float: none;
+		margin: 0 auto 5px auto;
+		width: 193px;
+		height: 136px;
+	}
 }

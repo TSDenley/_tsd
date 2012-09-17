@@ -14,6 +14,10 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php 
+					/*
+					 * Uses the 'Post Order' plugin to set 9 post, of my choosing,
+					 * to be displayed on the home page.
+					 */
 					$args = array(
 					              'orderby'   => 'menu_order',
 					              'order'     => 'ASC',
@@ -23,9 +27,6 @@ get_header(); ?>
 					$my_query = new WP_Query($args); 
 				?>
 
-				<?php // _tsd_content_nav( 'nav-above' ); ?>
-
-				<?php /* Start the Loop */ ?>
 				<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
 
 					<?php
@@ -37,8 +38,6 @@ get_header(); ?>
 					?>
 
 				<?php endwhile; ?>
-
-				<?php // _tsd_content_nav( 'nav-below' ); ?>
 
 			<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
 
