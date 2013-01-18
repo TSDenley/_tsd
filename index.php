@@ -19,6 +19,10 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
+				<?php if (is_category()) {
+					?><h2 class="cat-head"><?php single_cat_title('Category: ') ?></h2>
+				<?php } ?>
+
 				<?php _tsd_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>

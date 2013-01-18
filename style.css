@@ -398,10 +398,25 @@ a:active {color: #FF4B33; }
 	margin: 0;
 	padding-left: 0;
 	text-align: center;
+	background: #111;
 }
 .main-navigation li {
 	display: inline-block;
+	position: relative;
 }
+
+.main-navigation li.parent {
+	background-image: url("images/downArrow.png");
+	background-repeat: no-repeat;
+	background-position: 50% 95%;
+}
+
+.main-navigation li ul li {
+	display: block;
+	text-align: left;
+}
+
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -413,12 +428,12 @@ a:active {color: #FF4B33; }
 }
 .main-navigation ul ul {
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+		-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+		box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	display: none;
 	float: left;
 	position: absolute;
-		top: 1.5em;
+		top: 2.5em;
 		left: 0;
 	z-index: 99999;
 }
@@ -470,6 +485,13 @@ a:active {color: #FF4B33; }
 	font-size: 1.4em;
 	color: #444;
 }
+
+.cat-head {
+	font-size: 1em;
+	font-style: italic;
+	color: #999;
+}
+
 #main {
 	background: #fff;
 	width: 760px;
@@ -734,7 +756,12 @@ object {
 		box-shadow: none;
 	}
 
-	
+	article.grid {
+		float: none;
+		margin: 0 auto 5px auto;
+		width: 193px;
+		height: 136px;
+	}
 
 	div.wpcf7 input,
 	div.wpcf7 textarea {
@@ -750,18 +777,13 @@ object {
 		font-size: 2.5em;
 	}
 
-	.main-navigation ul {
+	/*.main-navigation ul {
 		text-align: left;
 	}
 
 	.main-navigation li {
 		display: block;
-	}
+	}*/
 
-	article.grid {
-		float: none;
-		margin: 0 auto 5px auto;
-		width: 193px;
-		height: 136px;
-	}
+	
 }
